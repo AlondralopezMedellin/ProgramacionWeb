@@ -1,0 +1,39 @@
+<!--NO SALIO-->
+<Html>
+        <head>
+            <title>Formulario 3 campos</title>
+        <script language="JavaScript">
+        <!-- HIDEN FROM OTHERS BROWSERS
+            function cuadrado(form,num)
+            {
+                from.nCuadrado.value = num*num;
+            }
+            fuction cubo(from,num)
+            {
+                form.nCubo.value = num*num*num;
+            }
+            function proceso(form)
+            {
+                form.nSemilla.blur();
+                var num = prompt("Proporciona numero semilla: ","numero ...");
+                form.nSemilla.value = num;
+                cuadrado(form,num);
+                cubo(form,num);
+            }
+    // STOP HIDING FROM OTHER BROWSERS -->
+    </SCRIPT>
+    </HEAD>
+    <BODY>
+        <FORM METHOD=POST>
+            Numero semilla:
+            <INPUT TYPE=text NAME="nSemilla" VALUE="" onFocus="proceso(this.form);">
+                <BR>
+            Numero al cuadrado:
+            <INPUT TYPE=text NAME="nCuadrado" VALUE="" onFocus="this.blur();">
+                <BR>
+            Numero al cubo:
+            <INPUT TYPE=text NAME="nCubo" VALUE="" onFocus="this.blur();">
+                <BR>
+        </FORM>
+    </BODY>
+</Html>

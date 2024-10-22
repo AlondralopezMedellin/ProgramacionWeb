@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Programa formulario Calculos</title>
+        <script language="JavaScript">
+        <!-- HIDE FROM OTHERS BROWSERS
+            function calcular(form,campo)
+            {
+                if(campo=="entrada")
+                {
+                   form.porDos.value = form.entrada.value*2;
+                   form.cuadrado.value = form.entrada.value * form.entrada.value; 
+                } else
+                if(campo == "porDos")
+                {
+                    form.entrada.value = form.entrada.value/2;
+                    form.cuadrado.value = form.entrada.value * form.entrada.value;
+                }else
+                {
+                    form.entrada.value = Math.sqrt(form.cuadrado.value);
+                    form.porDos.value=form.entrada.value*2;
+                }
+            }
+        // STOP HIDING FROM OTHER BROWSERS -->
+       </script>  
+    </head>
+    <body>
+        <form method="post">
+            Entrada: <input type="text" name="entrada" value=0 
+            onchange="calcular(this.form,this.name);">
+            <br>
+            Doble: <input type="text" name="porDos" value=0
+            onchange="calcular(this.form,this.name);">
+            <br>
+            Cuadrado: <input type="text" name="cuadrado" value=0 
+            onchange="calcular(this.form,this.name);">
+            <br>
+        </form>
+    </body>
+</html>

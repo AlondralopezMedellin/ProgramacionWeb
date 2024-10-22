@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Listado 6.9 Formulario Interactivo</title>
+        <script language="JavaScript">
+        <!-- HIDE FROM OTHER BROWSERS
+            function limpiarCampo(field)
+            {
+                //verifica si el campo referenciado tienen el valor por default 
+                if(field.value == field.defaultValue)
+                    {
+                        //por lo tanto hay que limpiar el campo
+                        field.value = "";
+                    }
+            }
+
+            function checarCampo(field)
+            {
+                if(field.value=="")
+                {
+                    field.value = field.defaultValue;
+                }
+            }
+            
+            function Mayuscula(form)
+            {
+                var texto = form.cuadroTexto.value;
+                form.cuadroTexto.value = form.cuadroTexto.value.toUpperCase();
+            }
+
+        // STOP HIDING FROM OTHER BROWSERS -->
+       </script>  
+    </head>
+    <body>
+       <form method="post">
+        <input type="text" name="nombre" value="Nombre"
+        onfocus="limpiarCampo(this);"
+        onblur="checarCampo(this);">
+        <br>
+        <input type="text" name="email" value="E-mail"
+        onfocus="limpiarCampo(this);"
+        onblur="checarCampo(this);">
+        <br>
+        <input type="text" name="Telefono" value="Telefono"
+        onfocus="limpiarCampo(this);"
+        onblur="checarCampo(this);">
+        <br>
+        <input type=TEXTAREA name="Descripcion" value="Descripcion"
+        onfocus="limpiarCampo(this);"
+        onblur="checarCampo(this);">
+        <br>
+        <TEXTAREA value="Descripcion" name = "cuadroTexto"
+        rows="4" cols="33"
+        onfocus="limpiarCampo(this);"
+        onblur="checarCampo(this);">Texto por default</TEXTAREA>
+        <br>
+        <input type="button" name="Mayuscula" value="MAYUSCULAS"
+        onclick="Mayuscula(this.form);"
+        >
+    </form>
+    </body>
+</html>

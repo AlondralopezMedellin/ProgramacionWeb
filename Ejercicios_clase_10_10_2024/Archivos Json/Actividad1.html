@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Datos JSON en un Archivo</title>
+</head>
+<body>
+    <h2>Guardar Datos JSON en nun Archivo</h2>
+    <button onclick="safeJSON()">Guardar JSON</button>
+    <script>
+        function safeJSON(){
+            var data = {
+                nombre: "Juan",
+                edad:30,
+                ciudad: "Madrid"
+            };
+            var json = JSON.stringify(data,null,2);
+            var blob = new Blob([json],{type: "application/json" });
+            var link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.download = "datos.json";
+            link.click();
+            window.URL.revokeObjectURL(link.href);
+        }
+    </script>
+</body>
+</html>

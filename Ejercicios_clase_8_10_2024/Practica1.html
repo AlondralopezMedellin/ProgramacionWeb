@@ -1,0 +1,108 @@
+<!DOCTYPE htm1> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario Datos Personales</title>
+        <style>
+          
+            fieldset{
+                background-color: #dce1f8c9; 
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+                width: 80%; 
+                margin: 0 auto; 
+                position: relative; 
+                z-index: 1; 
+                }
+            input{
+                border-radius: 5px;
+            }
+            
+        </style>  
+    </head>
+    <body>
+       <fieldset>
+        <legend aling = "center"><h1>Datos Personales</h1> </legend>
+            <form action = "" method = "post">    
+                <label for="first_name" >Nombres:</label> 
+                <input type = "text" name = "nombre" maxlength="20" required/> 
+                <br>
+                <br> 
+                <label for="first_name">Apellidos:</label> 
+                <input type = "text" name = "apellido" required/> 
+                <br>
+                <br>
+                <div>
+                Sexo: 
+                M
+                <input type="radio" name="accion" value="square" checked>
+                F
+                <input type="radio" name="accion" value="square" >
+                O
+                <input type="radio" name="accion" value="square">
+                </div> 
+                <br>
+                <div>
+                    Edad <input type="text" name="edad" required>
+                    Fecha de Nacimiento <input type="date" name="fecha" required>
+                </div>
+                <br>
+                    Correo Electronico <input type="email" name="email" required>
+                    <br>
+                    <br>
+                    Telefono <input type="tel" name="tel" maxlength="10" required>
+                    <br>
+                <br>
+                    Domicilio <input type="text" name="domicilio" required>
+                    <br>
+                <br>
+                    Estado <select name="estado" required>
+                            <option value="">Selecciona tu estado</option>
+                            <option value="Aguas Calientes">Aguas Calientes</option>
+                            <option value="Baja California">Baja California</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Durango">Durango</option>
+                    </select>
+                </fieldset> 
+                <fieldset>
+            <legend aling = "center"><h1>Datos Academicos</h1> </legend>
+            
+           <label>Nivel de Estudio </label> 
+           <br>
+           <select  name="nivel_estudio" id="lang" size="4">
+            <option value="Quinder">Quinder</option>
+            <option value="Primaria">Primaria</option>
+            <option value="Secundaria">Secundaria</option>
+            <option value="Preparatoria">Preparatoria</option>
+            <option value="Profesional">Profesional</option>
+            <option value="Maestria">Maestria</option>
+            <option value="Doctorado">Doctorado</option>
+           </select>
+           <br>
+           <br>
+           Nombre de la escuela del ultimo año: <input type="text" name="escuela" required>
+           <br>
+           <br>
+           Habilidades:
+           <div>
+            <input type="checkbox" name="expresion_escrita">
+            Expresion Escrita
+            <input type="checkbox" name="relaciones">
+            Relaciones Interpersonales
+           </div>
+           <div>
+            <input type="checkbox" name="expresion_oral">
+            Expresion Oral
+            <input type="checkbox" name="Analiticas">
+            Relaciones Analiticas
+           </div>
+           <br>
+           Otras Caracteristicas: <input type="text" name="caracteristicas" maxlength="100" required>
+           <br>
+           <br>
+           <input type="submit" value="Submit" /> 
+        <input type="reset" value="Reset" /> 
+    </form> 
+</fieldset>
+    </body>
+</html>

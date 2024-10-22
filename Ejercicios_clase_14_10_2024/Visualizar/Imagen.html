@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Imágenes</title>
+</head>
+<body>
+    <h2>Selecciona una imagen</h2>
+    <input type="file" id="fileInput" accept="image/*"> <br><br>
+    <img id="imagePreview" src="" alt="Vista previa" style="max-width: 100%; height: auto;">
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            var file = event.target.files[0]; // Obtenemos el archivo
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {  // Mostramos la imagen en el elemento <img>
+                    document.getElementById('imagePreview').src = e.target.result;
+                };
+                reader.readAsDataURL(file); // Leemos el archivo como una URL de datos (base64)
+            }
+        });
+    </script>
+</body>
+</html>

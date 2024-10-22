@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Programa de formulario libro</title>
+        <script language="JavaScript">
+        <!-- HIDE FROM OTHERS BROWSERS
+            function calcular(form)
+            {
+                form.porDos.value = form.nEntrada.value*2;
+                form.cuadrado.value = form.nEntrada.value*form.nEntrada.value;
+            }
+        // STOP HIDING FROM OTHER BROWSERS -->
+       </script>  
+    </head>
+    <body>
+        <form method="post">
+            Valor: <input type="text" name="nEntrada" value=0 onchange="calcular(this.form);">
+            <br>
+            Doble: <input type="text" name="porDos" value=0 onchange="this.form.nEntrada.value=this.value/2;calcular(this.form);">
+            <br>
+            Cuadrado: <input type="text" name="cuadrado" value=0 onchange="this.form.nEntrada.value
+            =Math.sqrt(this.value);calcular(this.form);">
+            <br>
+        </form>
+    </body>
+</html>

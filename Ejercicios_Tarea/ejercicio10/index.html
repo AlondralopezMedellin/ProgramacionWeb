@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Formulario Calculadora</title>
+        <script language="JavaScript">
+        <!-- HIDE FROM OTHER BROWSERS
+            //variables globales
+            var total = 0;
+            var lastOperation = '+';
+            var newNumber = true;
+            function enterNumber(digit)
+            {
+               var form = digit.form;
+               if(newNumber)
+               {
+                    clearNumber(form);
+                    newNumber = false;
+               }
+               form.display.value = form.display.value + digit.name ;
+            }
+            function clearExpr(form)
+            {
+                total = 0;
+                lastOperation = '+';
+                newNumber = true;
+                form.display.value = "";
+            }
+            function clearNumber(form)
+            {
+                form.display.value = "";
+            }
+            function calculate(operation)
+            {
+                var form = operation.form;
+                var expression = total + lastOperation + form.display.value;
+                lastOperation = operation.value;
+                total = eval(expression);
+                form.display.value = total;
+                newNumber = true;
+            }
+        // STOP HIDING FROM OTHER BROWSERS -->
+       </script>  
+    </head>
+    <body>
+        <form >
+            <TABLE >
+                <tr>
+                    <td colspan="4">
+                        <input type="text" name="display" value="" onfocus="this.blur();">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="7" value="7" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="8" value="8" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="9" value="9" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="+" value="+" onclick="calculate(this);">    
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="4" value="4" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="5" value="5" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="6" value="6" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="-" value="-" onclick="calculate(this);">    
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="1" value="1" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="2" value="2" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="3" value="3" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="*" value="*" onclick="calculate(this);">    
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" name="0" value="0" onclick="enterNumber(this);">    
+                    </td>
+                    <td>
+                        <input type="button" name="C" value="C" onclick="clearExpr(this.form);">    
+                    </td>
+                    <td>
+                        <input type="button" name="CE" value="CE" onclick="clearNumber(this.form);">    
+                    </td>
+                    <td>
+                        <input type="button" name="/" value="/" onclick="calculate(this);">    
+                    </td>
+                </tr>
+            </TABLE>
+        </form>
+    </body>
+</html>

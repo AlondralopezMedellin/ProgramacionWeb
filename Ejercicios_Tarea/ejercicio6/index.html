@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Programa con CheckBox</title>
+        <script language="JavaScript">
+        <!-- HIDE FROM OTHER BROWSERS
+            function calcular(form,callingField)
+            {
+                if(callingField == "resultado")
+                    {
+                        if(form.cuadrado.checked)
+                            {
+                                form.entrada.value = form.entrada.value * form.entrada.value;
+                            }
+                        else
+                            {
+                            form.entrada.value = form.resultado.value/2;  
+                            }
+                    }
+                else
+                    {
+                        if(form.cuadrado.checked)
+                            {
+                                form.resultado.value = form.entrada.value * form.entrada.value;
+                            }
+                        else
+                            {
+                                form.resultado.value = form.entrada.value * 2;
+                            }
+                    }
+            }
+        // STOP HIDING FROM OTHER BROWSERS -->
+       </script>  
+    </head>
+    <body>
+        <form method="post">
+            Valor de Entrada: <input type="text" name="entrada" value=0 
+            onchange="calcular(this.form,this.name);">
+            <br>
+            Accion elevar al cuadrado (por default doble): 
+            <input type="checkbox" name="cuadrado"
+            onclick="calcular(this.form,this.name);">
+            <br>
+            Resultado: 
+            <input type="text" name="resultado" value=0 
+            onchange="calcular(this.form,this.name);">
+            <br>
+        </form>
+    </body>
+</html>
